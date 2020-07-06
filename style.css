@@ -1,0 +1,325 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --transition: all 0.5s linear;
+}
+
+body{
+    max-width: 100%;
+    min-height: 100vh;
+    background-image: url('image/https___www.lifeofpix.com_wp-content_uploads_2019_05_dsc03571.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-bottom: 0;
+}
+
+/*--------------- nav ----------- */
+
+nav{
+    height: 90px;
+    background-color: rgba(34, 34, 68, 0.8);
+}
+
+.nav-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem
+}
+
+.nav-header h2{
+    font-weight: normal;
+    font-size: 1.7rem;
+    color: white;
+  }
+ .links a{
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: lighter;
+    padding: 0.8rem 1rem;
+    position: relative;
+    z-index: 100;
+    background-color: rgba(8, 8, 8, 0.97);
+    line-height: 4.5;
+} 
+
+
+.links  p{
+    display: none;
+}
+
+
+.links a:hover{
+    color: white;
+    background-color: rgba(59, 56, 56, 0.95);
+}
+
+.links{
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.show-links{
+    height: 34rem;
+}
+
+@media screen and (min-width: 1100px){
+   .nav-center{
+       max-width: 1170px;
+       margin: 0 auto;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 1rem;
+   }
+
+   nav{
+    padding: 0  2rem;
+   }
+
+   .nav-header{
+       padding: 0;
+   }
+   .nav-toggle{
+       display: none;
+   }
+   .links{
+       height: auto;
+       display: flex;
+   }
+
+   .links li{
+    padding: .5rem .5rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+   }
+
+   .links li:hover{
+       background: rgb(128, 128, 128, 0.4);
+       transition: all cubic-bezier(0.26, 0.25, 0.65, 0.61) 0.5s;
+   }
+
+   .links a{
+    text-transform: capitalize;
+    font-size: 1rem;
+    background-color: transparent;
+    color: white;
+    line-height: 1.6;
+    display: block;
+    padding: 0;
+    text-align: left;
+   }
+
+.links  p{
+    color: rgb(199, 196, 196);
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   font-size: 0.97rem;
+}
+   .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+}
+
+/* ------------- nav -------------- */
+
+
+.content{
+    display: none;
+  }
+    
+.bar1, .bar2, .bar3 {
+      width: 33px;
+      height: 3px;
+      background-color: #333;
+      background-color: rgb(190, 189, 189);
+      margin: .4em;
+      transition: 0.4s;
+    }
+    
+.change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-12px, 10px);
+      transform: rotate(-45deg) translate(-10px, 6px);
+    }
+    
+.change .bar2 {opacity: 0;}
+    
+ .change .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-7px, -5px);
+    }
+
+
+header{
+    margin: 3em 5em 5em 5em;
+    width: 500px; 
+    height: 280px;
+    color: white;
+    
+}
+
+header h1{
+    font-size: 75px;
+    font-family: serif;
+    z-index: -2;
+}
+header p{
+    line-height: 1.5;
+    font-size: 17px;
+    font-family: 'Public Sans', sans-serif;
+    letter-spacing: 1px;
+    z-index: -2;
+}
+
+article{
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+button{
+    margin-left: 5em;
+    outline: none;
+    border: white 2px solid;
+    background-color: transparent;
+    border-radius: 25px;
+    font-family: 'Public Sans', sans-serif;
+    width: 150px;
+    padding: .8em;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+button:hover{
+    border: rgb(0, 0, 0) 2px solid;
+    color: black;
+    background-color: white;
+}
+
+.float{
+    width: 350px;
+    height: 80px;
+    color: white;
+    background: rgba(5, 1, 29, 0.5);
+    margin-right: 3em;
+    padding: 1em;
+    font-family: 'Public Sans', sans-serif;
+}
+.float h1{
+    line-height: 1.5;
+    font-family: 'Public Sans', sans-serif;
+    text-align: right;
+}
+
+.float p{
+    line-height: 2;
+    font-family: 'Public Sans', sans-serif;
+    text-align: right;
+}
+
+@media screen and (max-width: 700px){
+    body{
+        background:linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)), url('image/https___www.lifeofpix.com_wp-content_uploads_2019_05_dsc03571.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        margin-bottom: 0;
+    }
+    
+    header{
+        margin: 2em 3em 3em 5em;
+        width: 400px; 
+        height: auto;
+        color: rgb(255, 255, 255);  
+    }
+    
+    header h1{
+        font-size: 50px;
+        margin-bottom: 1.5rem;
+    }
+    header p{
+        font-size: 1rem;
+    }
+
+    article{
+        margin-top: 5rem;
+        padding-bottom: .5rem;
+    }
+    
+    button{
+        transition: all cubic-bezier(0.26, 0.25, 0.65, 0.61) 0.5s;
+        margin-right: 1rem;
+    }
+    button:hover{
+        border: rgb(44, 44, 44) 2px solid;
+    }
+    
+    .float{
+        width: 300px;
+        height: auto;
+        margin-right: 1em;
+        padding: .5rem .5rem;
+       
+    }
+    
+    .float p{
+        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 500px){
+    
+    header{
+        margin: 1rem;
+        width: auto;   
+    }
+    
+    header h1{
+        font-size:  40px;
+        margin-bottom: 2rem;
+    }
+    header p{
+        font-size: .9rem;
+        margin-bottom: 0;
+    }
+
+    article{
+        display: block;
+        margin-top: 0;
+    }
+    
+    button{
+        transition: all cubic-bezier(0.26, 0.25, 0.65, 0.61) 0.5s;
+        padding: .5rem 1rem;
+        margin: 0 0 9rem 1rem;
+    }
+
+    button:hover{
+        border: rgb(44, 44, 44) 2px solid;
+    }
+    
+    .float{
+       max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+    
+    .float p{
+        line-height: 1.5;
+    }
+}
+
+
