@@ -135,7 +135,10 @@ nav{
 }
 
 /* ------------- nav -------------- */
-
+.underline{
+    border-bottom: 2px solid rgba(10, 105, 10, 0.521);
+    display: inline-block;
+}
 
 .content{
     display: none;
